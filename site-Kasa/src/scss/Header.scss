@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+        img{
+            width: 10%;
+        }
+        .btn-nav{
+            margin: 20px;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+        .btn-nav-active{
+            text-decoration: underline;
+        }
+}
