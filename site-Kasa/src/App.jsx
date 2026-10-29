@@ -1,14 +1,17 @@
 import {Routes, Route} from "react-router";
 import Accueil from "./pages/Accueil"
 import Erreur from "./pages/Erreur"
-import Contact from "./pages/APropos"
+import APropos from "./pages/APropos"
+import Layout from "./components/Layout"
 
 
 function App() {
   return(<Routes>
-    <Route path="/" element={<Accueil />} />
-    <Route path="*" element={<Erreur />} />
-    <Route path="/a-propos" element={<Contact />} />
+    <Route element={<Layout />}>
+      <Route path="/" element={<Accueil />} />
+      <Route path="/a-propos" element={<APropos />} />
+      <Route path="*" element={<Erreur />} />
+    </Route>
   </Routes>)
 }
 

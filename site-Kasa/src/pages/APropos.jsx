@@ -1,12 +1,9 @@
-import Header from "../components/Header"
-
-function Contact() {
+function APropos() {
     return(
         <div>
-            <Header />
             <div>Nous contacter</div>
         </div>
     )
 }
 
-export default Contact
+export default APropos
