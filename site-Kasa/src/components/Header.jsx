@@ -3,7 +3,8 @@ import logoHeader from "../assets/logo-PC.png"
 import "../scss/Header.scss"
 
 function Header() {
-    return(<header className="header">
+    return(
+        <header className="header">
             <img src={logoHeader} alt="logo Kasa" />
             <nav>
                 <Link to="/" className="btn-nav btn-nav-active">Accueil</Link>
