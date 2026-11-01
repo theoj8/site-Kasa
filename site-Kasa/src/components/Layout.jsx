@@ -1,13 +1,17 @@
 import {Outlet} from "react-router"
 import Header from "./Header"
 import Footer from "./Footer"
+import "../scss/Index.scss"
 
 function Layout() {
-    return(<div>
+    return(
+    <>
+        <div className="main">
             <Header />
             <Outlet />
-            <Footer />
         </div>
+        <Footer />
+    </>
     )
 }
 
