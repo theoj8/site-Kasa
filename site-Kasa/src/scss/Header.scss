@@ -16,4 +16,13 @@
         .btn-nav-active{
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+            img{
+                width: 40%;
+            }
+            .btn-nav{
+                margin: 0;
+                padding: 10px;
+            }
+        }
 }
