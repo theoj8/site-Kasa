@@ -1,4 +1,4 @@
-import logoFooter from "../assets/logo-PC-NB.png"
+import logoFooter from "../assets/Logo/logo-PC-NB.png"
 import "../scss/Footer.scss"
 
 function Footer() {

@@ -1,7 +1,7 @@
 import logements from "../assets/data/logements.json"
 import Card from "../components/Card"
 import Banner from "../components/Banner"
-import imgBanner from "../assets/img-banniere.jpg"
+import imgBanner from "../assets/Bannière/img-banniere.jpg"
 import "../scss/Accueil.scss"
 
 function Accueil() {
