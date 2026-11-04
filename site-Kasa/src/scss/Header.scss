@@ -13,7 +13,7 @@
             text-decoration: none;
             color: inherit;
         }
-        .btn-nav-active{
+        a.active{
             text-decoration: underline;
         }
         @media (max-width: 768px) {
