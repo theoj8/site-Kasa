@@ -23,9 +23,9 @@
         img{
             width: 24px;
             height: 14px;
+            transition: transform 0.3s;
         }
         .fleche.open{
-            rotate: 180deg;
-            transition: transform 5s;
+            transform: rotate(-180deg);
         }
 }
