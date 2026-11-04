@@ -5,13 +5,13 @@ import "../scss/Index.scss"
 
 function Layout() {
     return(
-    <>
+    <div className="all">
         <div className="main">
             <Header />
             <Outlet />
         </div>
         <Footer />
-    </>
+    </div>
     )
 }
 
