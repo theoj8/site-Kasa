@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import Banner from "../components/Banner";
 import imgBanner from "../assets/Bannière/img-banniere.jpg";
 import "../scss/Accueil.scss";
+import { Link } from "react-router";
 
 function Accueil() {
   const [logements, setLogements] = useState([]);
@@ -28,11 +29,12 @@ function Accueil() {
       ) : (
         <section className="cards">
           {logements.map((logement) => (
-            <Card
-              key={logement.id}
-              title={logement.title}
-              cover={logement.cover}
-            />
+            <Link key={logement.id} to={`/logement/${logement.id}`}>
+              <Card
+                title={logement.title}
+                cover={logement.cover}
+              />
+            </Link>
           ))}
         </section>
       )}
