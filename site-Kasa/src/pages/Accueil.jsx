@@ -1,20 +1,43 @@
-import logements from "../assets/data/logements.json"
-import Card from "../components/Card"
-import Banner from "../components/Banner"
-import imgBanner from "../assets/Bannière/img-banniere.jpg"
-import "../scss/Accueil.scss"
+import { useState, useEffect } from "react";
+import Card from "../components/Card";
+import Banner from "../components/Banner";
+import imgBanner from "../assets/Bannière/img-banniere.jpg";
+import "../scss/Accueil.scss";
 
 function Accueil() {
-    return (
-        <div>
-            <Banner cover={imgBanner} text="Chez vous, partout et ailleurs"/>
-            <section className="cards">
-                {logements.map((logement) => (
-                    <Card key={logement.id} title={logement.title} cover={logement.cover} />
-                ))}
-            </section>
-        </div>
-    )
+  const [logements, setLogements] = useState([]);
+  const [erreur, setErreur] = useState(false);
+  useEffect(() => {
+    fetch("http://localhost:8080/api/properties")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Erreur du serveur");
+        }
+        return response.json();
+      })
+      .then((data) => setLogements(data))
+      .catch(() => setErreur(true));
+  }, []);
+  return (
+    <div>
+      <Banner cover={imgBanner} text="Chez vous, partout et ailleurs" />
+      {erreur ? (
+        <p>
+          Impossible de charger les logements. Veuillez réessayer plus tard.
+        </p>
+      ) : (
+        <section className="cards">
+          {logements.map((logement) => (
+            <Card
+              key={logement.id}
+              title={logement.title}
+              cover={logement.cover}
+            />
+          ))}
+        </section>
+      )}
+    </div>
+  );
 }
 
-export default Accueil
+export default Accueil;
