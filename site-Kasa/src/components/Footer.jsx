@@ -1,13 +1,13 @@
-import logoFooter from "../assets/Logo/logo-PC-NB.png"
-import "../scss/Footer.scss"
+import logoFooter from "../assets/Logo/logo-PC-NB.png";
+import "../scss/Footer.scss";
 
 function Footer() {
-    return(
-        <footer className="footer">
-            <img src={logoFooter} alt="logo Kasa" />
-            <p>© 2026 Kasa. All rights reserved</p>
-        </footer>
-    )
+  return (
+    <footer className="footer">
+      <img src={logoFooter} alt="logo Kasa" />
+      <p>© 2026 Kasa. All rights reserved</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

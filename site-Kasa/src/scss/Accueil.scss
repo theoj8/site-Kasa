@@ -1,13 +1,13 @@
-.cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    padding: 40px;
-        @media (max-width: 768px) {
-            grid-template-columns: 1fr;
-            background-color: transparent;
-            padding: 0;
-        }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  padding: 40px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    background-color: transparent;
+    padding: 0;
+  }
 }

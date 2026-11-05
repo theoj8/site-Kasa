@@ -30,10 +30,7 @@ function Accueil() {
         <section className="cards">
           {logements.map((logement) => (
             <Link key={logement.id} to={`/logement/${logement.id}`}>
-              <Card
-                title={logement.title}
-                cover={logement.cover}
-              />
+              <Card title={logement.title} cover={logement.cover} />
             </Link>
           ))}
         </section>
