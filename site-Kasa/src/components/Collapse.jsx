@@ -16,7 +16,7 @@ function Collapse(props) {
           />
         </button>
       </h2>
-      {ouvert && <p>{props.content}</p>}
+      {ouvert && <div>{props.children}</div>}
     </div>
   );
 }

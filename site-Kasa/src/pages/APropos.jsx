@@ -10,7 +10,9 @@ function APropos() {
       <Banner cover={imgBanner} />
       <section className="collapses">
         {datas.map((data) => (
-          <Collapse key={data.id} title={data.title} content={data.content} />
+          <Collapse key={data.id} title={data.title}>
+            <p>{data.content}</p>
+          </Collapse>
         ))}
       </section>
     </div>
