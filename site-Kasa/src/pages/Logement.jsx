@@ -5,6 +5,7 @@ import Host from "../components/Host";
 import Tags from "../components/Tags";
 import Rating from "../components/Rating";
 import Carousel from "../components/Carousel";
+import "../scss/Logement.scss";
 
 function Logement() {
   const { id } = useParams();
@@ -30,26 +31,28 @@ function Logement() {
   return (
     <>
       <Carousel key={logement.id} pictures={logement.pictures} />
-      <div className="info-logement">
-        <h1>{logement.title}</h1>
-        <p>{logement.location}</p>
-        <Tags tags={logement.tags} />
-      </div>
+      <section className="header-logement">
+        <div className="info-logement">
+          <h1>{logement.title}</h1>
+          <p>{logement.location}</p>
+          <Tags tags={logement.tags} />
+        </div>
+        <div className="host-logement">
+          <Host name={logement.host.name} picture={logement.host.picture} />
+          <Rating rating={logement.rating} />
+        </div>
+      </section>
       <div className="collapses-logement">
         <Collapse title="Description">
           <p>{logement.description}</p>
         </Collapse>
-        <Collapse title="Equipements">
+        <Collapse title="Équipements">
           <ul>
             {logement.equipments.map((equipment) => (
               <li key={equipment}>{equipment}</li>
             ))}
           </ul>
         </Collapse>
-      </div>
-      <div className="host-logement">
-        <Host name={logement.host.name} picture={logement.host.picture} />
-        <Rating rating={logement.rating} />
       </div>
     </>
   );

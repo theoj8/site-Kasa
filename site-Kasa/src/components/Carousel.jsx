@@ -13,6 +13,7 @@ function Carousel(props) {
       {total > 1 && (
         <>
           <button
+            className="btn-nav-carousel btn-left"
             type="button"
             aria-label="Image précédente"
             onClick={() => setIndex(index === 0 ? total - 1 : index - 1)}
@@ -20,6 +21,7 @@ function Carousel(props) {
             <img src={flecheGauche} alt="" />
           </button>
           <button
+            className="btn-nav-carousel btn-right"
             type="button"
             aria-label="Image suivante"
             onClick={() => setIndex(index === total - 1 ? 0 : index + 1)}
