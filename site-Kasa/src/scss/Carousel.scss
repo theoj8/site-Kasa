@@ -31,4 +31,14 @@
             margin: 0;
             color: white;
         }
+        @media (max-width: 768px) {
+            .btn-left, .btn-right{
+                img{
+                    width: 16px;
+                }
+            }
+            p{
+                display: none;
+            }
+        }
 }
