@@ -1,5 +1,3 @@
-import "../scss/Tags.scss";
-
 function Tags(props) {
   return (
     <ul className="tags">

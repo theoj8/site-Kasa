@@ -29,7 +29,12 @@ function Accueil() {
       ) : (
         <section className="cards">
           {logements.map((logement) => (
-            <Link key={logement.id} to={`/logement/${logement.id}`} target="_blank" rel="noopener noreferrer">
+            <Link
+              key={logement.id}
+              to={`/logement/${logement.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Card title={logement.title} cover={logement.cover} />
             </Link>
           ))}

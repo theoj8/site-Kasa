@@ -1,5 +1,3 @@
-import "../scss/Host.scss";
-
 function Host(props) {
   return (
     <div className="host">
